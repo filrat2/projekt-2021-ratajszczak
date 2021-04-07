@@ -2,4 +2,7 @@ install.packages("readxl")
 
 library(readxl)
 
-read_excel("kursy.xlsx")
+kursy = read_excel("kursy.xlsx")
+
+print(kursy, n=nrow(kursy))
+
