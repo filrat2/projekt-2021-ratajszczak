@@ -5,3 +5,5 @@ TEST2
 S3
 
 Test
+
+działa
