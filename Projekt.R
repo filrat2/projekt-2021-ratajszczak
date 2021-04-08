@@ -68,15 +68,18 @@ sprzedaz(10, EUR) #jeśli sprzedasz x danej waluty, dostaniesz wynik w zł
 porownanie = function(x, y){
   if (x > y){
     cat(paste("Kurs pierwszej wybranej waluty jest o", (x-y),"zł wyższy niż kurs drugiej wybranej waluty."))
-  } else{
+  } else if (x < y){
     cat(paste("Kurs pierwszej wybranej waluty jest o", abs(x-y),"zł niższy niż kurs drugiej wybranej waluty."))
-  } 
+  } else {
+    cat(paste("Kursy tych walut są równe. Prawdopodobnie do porównania wybrałeś dwie takie same waluty."))
+  }
 }  
 
 porownanie(HUF, PLN)
 
-porownanie(GBP, EUR)
+porownanie(PLN, HUF)
     
+porownanie(PLN, PLN)
 
 #notatki do usunięcia
 x = 3
