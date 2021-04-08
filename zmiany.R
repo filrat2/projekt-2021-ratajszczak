@@ -47,7 +47,7 @@ sprzedaz(130, EUR)
 
 
 
-#FUNKCJA_JAKA_TO_WALUTA?
+#FUNKCJA_JAKA_TO_WALUTA?#
 
 jaka_to_waluta = function(kraj){
   
