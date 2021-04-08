@@ -51,6 +51,7 @@ kursy
   KRW = kursy$kurs_waluty[33]
   CNY = kursy$kurs_waluty[34]
   XDR = kursy$kurs_waluty[35]
+  PLN = 1.00
 
 zakup = function(x, y){
   x / y  
@@ -72,7 +73,7 @@ porownanie = function(x, y){
   } 
 }  
 
-porownanie(EUR, GBP)
+porownanie(EUR, PLN)
 
 porownanie(GBP, EUR)
     
