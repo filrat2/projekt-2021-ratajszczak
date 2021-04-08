@@ -59,7 +59,7 @@ PLN = 1.00
   #Funkcja kupno
   
 kupno = function(x, y){
-  cat(paste(x, "zł możesz wymienić na", (x / y),
+  cat(paste(x, "zł możesz wymienić na", round((x / y), digits =2),
             print(substitute(y)),"."))
 }
   
@@ -69,7 +69,7 @@ kupno(130, EUR)
   
 sprzedaz = function(x, y){
   cat(paste("Jeśli sprzedasz",x , print(substitute(y)) , "otrzymasz",
-            (x * y), "zł."))
+           round((x * y), digits = 2), "zł."))
   } 
   
 sprzedaz(130, EUR) 
@@ -138,19 +138,17 @@ Indonezja =  kursy[31,]
 Indie =  kursy[32,]
 KoreaPoludniowa =  kursy[33,]
 Chiny = kursy[34,]
-XDR =  kursy[35,]
-Polska = data.frame(symbol_waluty = "PLN",
-      kurs_waluty = "1.00",
-      nazwa_waluty = "polski złoty")
-
+Polska = data.frame(nazwa_waluty = "polski złoty",
+                    symbol_waluty = "PLN",
+                    kurs_waluty = "1.00")
 
   #Funkcja porownanie
   
 porownanie = function(x, y){
   if (x > y){
-    cat(paste("Kurs pierwszej wybranej waluty jest o", (x-y),"zł wyższy niż kurs drugiej wybranej waluty."))
+    cat(paste("Kurs pierwszej wybranej waluty jest o", round((x-y), digits = 2),"zł wyższy niż kurs drugiej wybranej waluty."))
   } else if (x < y){
-    cat(paste("Kurs pierwszej wybranej waluty jest o", abs(x-y),"zł niższy niż kurs drugiej wybranej waluty."))
+    cat(paste("Kurs pierwszej wybranej waluty jest o", round(abs(x-y), digits = 2),"zł niższy niż kurs drugiej wybranej waluty."))
   } else {
     cat(paste("Kursy tych walut są równe. Prawdopodobnie do porównania wybrałeś dwie takie same waluty."))
   }
@@ -160,4 +158,8 @@ porownanie(USD, USD)
 
 porownanie(PLN, HUF)
     
-porownanie(PLN, PLN)
+porownanie(USD, XDR)
+
+porownanie(INR, CZK)
+
+porownanie(USD)
