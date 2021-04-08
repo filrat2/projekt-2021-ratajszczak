@@ -64,6 +64,19 @@ sprzedaz = function(x, y){
 sprzedaz(10, EUR) #jeśli sprzedasz x danej waluty, dostaniesz wynik w zł
 
 
+porownanie = function(x, y){
+  if (x > y){
+    cat(paste("Kurs pierwszej wybranej waluty jest o", (x-y),"zł wyższy niż kurs drugiej wybranej waluty."))
+  } else{
+    cat(paste("Kurs pierwszej wybranej waluty jest o", (x-y),"zł niższy niż kurs drugiej wybranej waluty."))
+  } 
+}  
+
+porownanie(EUR, GBP)
+
+porownanie(GBP, EUR)
+    
+
 #notatki do usunięcia
 x = 3
 kursy$symbol_waluty[x]
