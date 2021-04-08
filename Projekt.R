@@ -18,10 +18,7 @@ names(kursy)[names(kursy) == "Nazwa.waluty"] = "nazwa_waluty"
 colnames(kursy)
 kursy
 
-
-
-
-  #przypisanie walut do kursów
+  #przypisanie kursów do międzynarodowych symboli walut
 
 THB = kursy$kurs_waluty[1]
 USD = kursy$kurs_waluty[2]
@@ -60,18 +57,16 @@ CNY = kursy$kurs_waluty[34]
 XDR = kursy$kurs_waluty[35]
 PLN = 1.00
 
-  
-  
-  #FUNKCJE_KUPNO_SPRZEDAz
+  #Funkcja kupno
   
 kupno = function(x, y){
-  cat(paste(x, "zł możesz wymienić", (x / y),
-            print(substitute(y))))
-  }
-  
+  cat(paste(x, "zł możesz wymienić na", (x / y),
+            print(substitute(y)),"."))
+}
   
 kupno(130, EUR) 
   
+  #Funkcja sprzedaz
   
 sprzedaz = function(x, y){
   cat(paste("Jeśli sprzedasz",x , print(substitute(y)) , "otrzymasz",
@@ -80,16 +75,11 @@ sprzedaz = function(x, y){
   
 sprzedaz(130, EUR) 
   
-  
-  
-  #FUNKCJA_JAKA_TO_WALUTA?#
+  #Funkcja jaka_to_waluta
   
 jaka_to_waluta = function(kraj){
   kraj
   }
-  
-jaka_to_waluta(Rumunia)
-  
   
 kraj = c(Tajlandia, StanyZjednoczone, Australia, Hongkong, Kanada, NowaZelandia,
          Singapur, EUR, Węgry, Szwajcaria, WielkaBrytania, Ukraina, Japonia,
@@ -106,21 +96,21 @@ NowaZelandia = c("dolar nowozelandzki", "NZD")
 Singapur = c("dolar singapurski", "SGD")
 Niemcy = c("euro", "EUR")
 Hiszpania = c("euro", "EUR")
-Słowacja = c("euro", "EUR")
-Włochy = c("euro", "EUR")
+Slowacja = c("euro", "EUR")
+Wlochy = c("euro", "EUR")
 Francja = c("euro", "EUR")
 Finlandia = c("euro", "EUR")
-Czarnogóra = c("euro", "EUR")
+Czarnogora = c("euro", "EUR")
 Austria = c("euro", "EUR")
 Portugalia = c("euro", "EUR")
 Malta = c("euro", "EUR")
 Litwa = c("euro", "EUR")
 Estonia = c("euro", "EUR")
 Andora = c("euro", "EUR")
-Łotwa = c("euro", "EUR")
+Lotwa = c("euro", "EUR")
 Belgia = c("euro", "EUR")
 Cypr = c("euro", "EUR")
-Słowenia = c("euro", "EUR")
+Slowenia = c("euro", "EUR")
 Luksemburg = c("euro", "EUR")
 Holandia = c("euro", "EUR")
 Irlandia = c("euro", "EUR")
@@ -128,7 +118,7 @@ Monako = c("euro", "EUR")
 SanMarino = c("euro", "EUR")
 Watykan = c("euro", "EUR")
 Grecja = c("euro", "EUR")
-Węgry = c("forint", "HUF")  
+Wegry = c("forint", "HUF")  
 Szwajcaria = c("frank szwajcarski", "CHF")
 WielkaBrytania = c("funt szterling", "GBP")
 Ukraina = c("hrywna (Ukraina)", "UAH")
@@ -140,7 +130,7 @@ Norwegia = c("korona norweska", "NOK")
 Szwecja = c("korona szwedzka", "SEK")
 Chorwacja =  c("kuna chorwacka", "HRK")
 Rumunia = c("lej rumuński", "RON")
-Bułgaria = c("lew (Bułgaria)", "BGN")
+Bulgaria = c("lew (Bułgaria)", "BGN")
 Turcja = c("lira turecka", "TRY")
 Izrael = c("nowy izraelski szekel", "ILS")
 Chile = c("peso chilijskie", "CLP")
@@ -152,13 +142,16 @@ Malezja = c("ringgit (Malezja)", "MYR")
 Rosja = c("rubel rosyjski", "RUB")
 Indonezja = c("rupia indonezyjska", "IDR")
 Indie = c("rupia indyjska", "INR")
-KoreaPołudniowa = c("won południowokoreański", "KRW")
+KoreaPoludniowa = c("won południowokoreański", "KRW")
 Chiny = c("yuan renminb", "CNY")
 XDR = c("MFW", "SDR")
+Polska = c("polski złoty", "PLN")
 
-  
-  
-#FUNKCJA_POROWNANIE
+jaka_to_waluta(Rumunia)
+
+jaka_to_waluta(Polska)
+
+  #Funkcja porownanie
   
 porownanie = function(x, y){
   if (x > y){
@@ -175,6 +168,3 @@ porownanie(USD, USD)
 porownanie(PLN, HUF)
     
 porownanie(PLN, PLN)
-
-
-
