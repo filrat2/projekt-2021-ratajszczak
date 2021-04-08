@@ -1,3 +1,8 @@
-Projekt ze wstępu do programowania 
-członkowie: Arkadiusz Młyńczak, Filip Ratajszczak, Jan Malak
-pomysł na projekt: praca na kursach walut
+#Projekt 2021<br>
+#Przedmiot: Wstęp do programowania
+
+Autorzy: <br>
+Arkadiusz Młyńczak, <br>
+Filip Ratajszczak, <br>
+Jan Malak <br>
+
