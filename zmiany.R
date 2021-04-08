@@ -18,26 +18,22 @@ sprzedaz = function(x, y){
 }
 sprzedaz(100, EUR) 
 
-#POPRAWA
+#FUNKCJE_KUPNO_SPRZEDAZ_POPRAWA
 
 kupno = function(x, y){
-  
-  if (x / y){
-    cat(paste("Za", x, "zł, możesz wymienić", (x / y), 
-              "wybranej waluty."))
+    cat(paste(x, "zł możesz wymienić", (x / y), 
+              print(substitute(y))))
   }
-}
+
 
 kupno(130, EUR) 
 
 
 sprzedaz = function(x, y){
-  
-  if (x * y){
-    cat(paste("Jeśli sprzedasz",x ,y %in% kursy , "otrzymasz",
+  cat(paste("Jeśli sprzedasz",x , print(substitute(y)) , "otrzymasz",
               (x * y), "zł."))
   } 
-}
+
 sprzedaz(130, EUR) 
 
 
