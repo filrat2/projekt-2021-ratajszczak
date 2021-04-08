@@ -1,20 +1,18 @@
 kupno = function(x, y){
-  
-  if (x / y){
+    if (x / y){
     cat(paste("Jeśli zapłacisz", x, "zł,", "dostaniesz", (x / y), 
-              "wartości waluty."))
+              print(substitute(y))))
   }
 }
 
-kupno(130, EUR) 
+kupno(100, EUR) 
 
 
 sprzedaz = function(x, y){
-  
-  if (x * y){
-    cat(paste("Jeśli sprzedasz liczbę",x ,"wartosci waluty,","dostaniesz",
+    if (x * y){
+    cat(paste("Jeśli sprzedasz",x ,print(substitute(y)),"dostaniesz",
               (x * y), "zł." ))
   } 
 }
-sprzedaz(100, EUR) 
 
+sprzedaz(100, EUR) 
