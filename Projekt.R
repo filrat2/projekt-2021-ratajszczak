@@ -75,7 +75,7 @@ porownanie = function(x, y){
   }
 }  
 
-porownanie(HUF, PLN)
+porownanie(HUF, PLN) 
 
 porownanie(PLN, HUF)
     
