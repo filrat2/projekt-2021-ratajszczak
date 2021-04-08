@@ -69,11 +69,11 @@ porownanie = function(x, y){
   if (x > y){
     cat(paste("Kurs pierwszej wybranej waluty jest o", (x-y),"zł wyższy niż kurs drugiej wybranej waluty."))
   } else{
-    cat(paste("Kurs pierwszej wybranej waluty jest o", (x-y),"zł niższy niż kurs drugiej wybranej waluty."))
+    cat(paste("Kurs pierwszej wybranej waluty jest o", abs(x-y),"zł niższy niż kurs drugiej wybranej waluty."))
   } 
 }  
 
-porownanie(EUR, PLN)
+porownanie(HUF, PLN)
 
 porownanie(GBP, EUR)
     
