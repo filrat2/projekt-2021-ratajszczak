@@ -1,5 +1,5 @@
 #Projekt 2021<br>
-#Przedmiot: Wstęp do programowania
+Przedmiot: Wstęp do programowania
 
 Autorzy: <br>
 Arkadiusz Młyńczak, <br>
