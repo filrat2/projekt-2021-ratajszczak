@@ -21,7 +21,7 @@ Nasza praca projetkowa to zbiór trzech funkcji, które związane są ściśle z
 
 - <b>funkcja "sprzedaz(x, y)"</b> - <br>
 
-      x - wartość liczbowa<br>
+      x - wartość liczbowa
       Ilość waluty, jaką chcesz zakupić.
       
       y -  międzynarodowy symbol kupowanej waluty
