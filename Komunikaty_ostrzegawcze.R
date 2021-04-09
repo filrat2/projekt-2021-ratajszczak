@@ -3,5 +3,20 @@ sym_wal = data.frame(x = (c("PLN, USD, AUD, HKD, CAD, NZD, SGD, EUR, HUF, CHF, G
 sym_wal
 
 
-currency = structure(kalk, class = "waluta")
+currency = structure(sym_wal, class = "waluta")
 currency
+
+
+kalkulator_walut = function(x, y){
+  vals = c(x, y)
+  
+  if (is.numeric(vals)){
+  stop("ERROR | Wszystkie argumenty muszą zawierać znaki!")
+  
+  }
+}
+  
+  
+  
+  
+
