@@ -9,8 +9,8 @@ Nasza praca projetkowa to zbiór trzech funkcji, które związane są ściśle z
 
 - <b>funkcja "kupno(x, y)"</b> - <br>
 
-      x - wartość liczbowa.<br>
-      Ilość waluty, jaką chcesz sprzedać w kantorze.<br>
+      x - wartość liczbowa.
+      Ilość waluty, jaką chcesz sprzedać w kantorze.
       
       y - międzynarodowy symbol sprzedawanej waluty
       Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
