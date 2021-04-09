@@ -9,7 +9,7 @@ Nasza praca projetkowa to zbiór trzech funkcji, które związane są ściśle z
 
 - <b>funkcja "kupno(x, y)"</b> - <br>
 
-      x - wartość liczbowa.
+      x - wartość liczbowa
       Ilość waluty, jaką chcesz sprzedać w kantorze.
       
       y - międzynarodowy symbol sprzedawanej waluty
@@ -31,7 +31,7 @@ Nasza praca projetkowa to zbiór trzech funkcji, które związane są ściśle z
           
       sprzedaz(130, EUR) 
 
-- <b>funkcja "porownanie(x, y)"</b> - <br><br>
+- <b>funkcja "porownanie(x, y)"</b> - <br>
       
       x - międzynarodowy symbol pierwszej wybranej do porównania waluty
       Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
