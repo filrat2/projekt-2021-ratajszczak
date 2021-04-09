@@ -1,6 +1,10 @@
+#Jeśli nie posiadasz zainsalowanego pakietu "readxl" zrób to na początku poprzez usunięcie znaku "#" w następnym wierszu oraz wykonanie wybranej linii kodu w skrypcie R za pomocą skrótu klawiszowego Ctrl+Enter.
+
+#install.packages("readxl")
+
 library(readxl)
 
-  #stworzenie ramki danych z kursami walut
+#stworzenie ramki danych z kursami walut
 
 kursy_plik = read_excel("kursy.xlsx")
 
@@ -17,6 +21,9 @@ colnames(kursy)
 kursy
 kursy[3,]
 
+#OBIEKTY
+
+  #obikety kursów
   #przypisanie kursów do międzynarodowych symboli walut
 
 THB = kursy$kurs_waluty[1]
@@ -56,30 +63,7 @@ CNY = kursy$kurs_waluty[34]
 XDR = kursy$kurs_waluty[35]
 PLN = 1.00
 
-  #Funkcja kupno
-  
-kupno = function(x, y){
-  cat(paste(x, "zł możesz wymienić na", round((x / y), digits =2),
-            print(substitute(y)),"."))
-}
-  
-kupno(130, EUR) 
-  
-  #Funkcja sprzedaz
-  
-sprzedaz = function(x, y){
-  cat(paste("Jeśli sprzedasz",x , print(substitute(y)) , "otrzymasz",
-           round((x * y), digits = 2), "zł."))
-  } 
-  
-sprzedaz(130, EUR) 
-  
-  #Funkcja jaka_to_waluta
-  
-
-kraje = print("Obsługiwane przez nasz zbiór funkcji państwa to: Tajlandia, Stany Zjednoczone, Australia, Hongkong, Kanada, Nowa Zelandia, Singapur, Niemcy, Hiszpania, Słowacja, Włochy, Francja, Czarnogóra, Austria, Portugalia, Malta, Litwa, Estonia, Andora, Łotwa, Belgia, Cypr, Słowenia, Luksemburg, Holandia, Irlandia, Monako, San Marino, Watykan, Greja, Węgry, Szwajcaria, Wielka Brytania, Ukraina, Japonia, Czechy, Dania, Islandia, Norwegia, Szwecja, Chorwacja, Rumunia, Bułgaria, Turcja, Izrael, Chile, Filipiny, Meksyk, RPA, Brazylia, Malezja, Rosja, Indonezja, Indie, Korea Południowa, Chiny, Polska")
-
-kraje 
+  #obiekty państw
 
 Tajlandia = kursy[1,]  
 StanyZjednoczone = kursy[2,]
@@ -142,8 +126,51 @@ Polska = data.frame(nazwa_waluty = "polski złoty",
                     symbol_waluty = "PLN",
                     kurs_waluty = "1.00")
 
+  #obiekt "kraje"
+
+kraje = print("Obsługiwane przez nasz zbiór funkcji państwa to: Tajlandia, Stany Zjednoczone, Australia, Hongkong, Kanada, Nowa Zelandia, Singapur, Niemcy, Hiszpania, Słowacja, Włochy, Francja, Czarnogóra, Austria, Portugalia, Malta, Litwa, Estonia, Andora, Łotwa, Belgia, Cypr, Słowenia, Luksemburg, Holandia, Irlandia, Monako, San Marino, Watykan, Greja, Węgry, Szwajcaria, Wielka Brytania, Ukraina, Japonia, Czechy, Dania, Islandia, Norwegia, Szwecja, Chorwacja, Rumunia, Bułgaria, Turcja, Izrael, Chile, Filipiny, Meksyk, RPA, Brazylia, Malezja, Rosja, Indonezja, Indie, Korea Południowa, Chiny, Polska")
+
+kraje 
+
+  #obiekt "waluty"
+
+waluty = print("Obsługiwane przez nasz zbiór funkcji waluty to: THB (bat (Tajlandia), USD (dolar amerykański), AUD (dolar australijski), HKD (dolar Hongkongu), CAD (dolar kanadyjski), NZD (dolar nowozelandzki), SGD (dolar singapurski), EUR (euro), HUF (forint (Węgry)), CHF (frank szwajcarski), GBP (funt szterling), UAH (hrywna (Ukraina)),JPY (jen (Japonia)), CZK (korona czeska), DKK (korona duńska), ISK (korona islandzka), NOK (korona norweska), SEK (korona szwedzka), HRK (kuna (Chorwacja)), RON (lej rumuński), BGN (lew (Bułgaria)), TRY (lira turecka), ILS (nowy izraelski szekel), CLP (peso chilijskie), PHP (peso filipińskie), MXN (peso meksykańskie), ZAR (rand (Republika Południowej Afryki)), BRL (real (Brazylia)), MYR (ringgit (Malezja)), RUB (rubel rosyjski), IDR (rupia indonezyjska), INR (rupia indyjska), KRW (won południowokoreański), CNY (yuan renminbi (Chiny)), XDR (SDR (MFW)), PLN (polski złoty nowy)")
+
+waluty
+
+
+
+#FUNKCJE
+
+
+  #Funkcja kupno
+
+kupno = function(x, y){
+  cat(paste(x, "zł możesz wymienić na", round((x / y), digits =2),
+            print(substitute(y)),"."))
+}
+
+          #przykład
+          
+          kupno(130, EUR) 
+
+
+
+  #Funkcja sprzedaz
+
+sprzedaz = function(x, y){
+  cat(paste("Jeśli sprzedasz",x , print(substitute(y)) , "otrzymasz",
+            round((x * y), digits = 2), "zł."))
+} 
+
+          #przykład  
+          
+          sprzedaz(130, EUR) 
+
+
+
   #Funkcja porownanie
-  
+
 porownanie = function(x, y){
   if (x > y){
     cat(paste("Kurs pierwszej wybranej waluty jest o", round((x-y), digits = 2),"zł wyższy niż kurs drugiej wybranej waluty."))
@@ -154,12 +181,10 @@ porownanie = function(x, y){
   }
 }  
 
-porownanie(USD, USD) 
-
-porownanie(PLN, HUF)
-    
-porownanie(USD, XDR)
-
-porownanie(INR, CZK)
-
-porownanie(USD)
+          #przykłady
+          
+          porownanie(USD, USD) 
+          
+          porownanie(PLN, USD)
+          
+          porownanie(USD, PLN)
