@@ -14,7 +14,15 @@ kalkulator_walut = function(x, y){
   stop("ERROR | Wszystkie argumenty muszą zawierać znaki!")
   
   }
+
+  if (!all(c(length(x), length(y)) == 3)){
+  stop("ERROR! | Każdemu argumentowi przypisane są tylko trzy wartości.")
+
+
+  }     
 }
+
+
   
   
   
