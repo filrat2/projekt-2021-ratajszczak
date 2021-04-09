@@ -7,7 +7,7 @@ Nasza praca projetkowa to zbiór trzech funkcji, które związane są ściśle z
 
 <b>Funkcje:</b>
 
-- <b>funkcja "kupno(x, y)"</b> - <br>
+- <b>funkcja "kupno(x, y)"</b> - funkcja służąca do przeliczania przychodu, jaki otrzymamy po sprzedaży wprowadzonej do funkcji ilości sprzedawanej waluty (argument x) oraz waluty którą chcemy sprzedać (argument y).  <br>
 
       x - wartość liczbowa
       Ilość waluty, jaką chcesz sprzedać w kantorze.
@@ -19,7 +19,7 @@ Nasza praca projetkowa to zbiór trzech funkcji, które związane są ściśle z
           
       kupno(130, EUR)
 
-- <b>funkcja "sprzedaz(x, y)"</b> - <br>
+- <b>funkcja "sprzedaz(x, y)"</b> - funkcja służąca do przeliczania ceny zakupu wybranej ilości waluty, którą chcemy zakupić. <br>
 
       x - wartość liczbowa
       Ilość waluty, jaką chcesz zakupić.
@@ -31,7 +31,7 @@ Nasza praca projetkowa to zbiór trzech funkcji, które związane są ściśle z
           
       sprzedaz(130, EUR) 
 
-- <b>funkcja "porownanie(x, y)"</b> - <br>
+- <b>funkcja "porownanie(x, y)"</b> - funkcja służąca do porównywania aktualnych kursów pomiędzy różnymi walutami. <br>
       
       x - międzynarodowy symbol pierwszej wybranej do porównania waluty
       Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
