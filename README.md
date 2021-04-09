@@ -7,11 +7,45 @@ Nasza praca projetkowa to zbiór trzech funkcji, które związane są ściśle z
 
 <b>Funkcje:</b>
 
-- <b>funkcja "kupno"</b> - <br>
+- <b>funkcja "kupno(x, y)"</b> - <br>
 
-- <b>funkcja "sprzedaz"</b> - <br>
+      <b>x</b> - wartość liczbowa.<br>
+      Ilość waluty, jaką chcesz sprzedać w kantorze.<br>
+      
+      <b>y</b> - międzynarodowy symbol sprzedawanej waluty
+      Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
+      
+      Przykład:
+          
+      kupno(130, EUR)
 
-- <b>funkcja "porownanie"</b> - <br><br>
+- <b>funkcja "sprzedaz(x, y)"</b> - <br>
+
+      <b>x</b> - wartość liczbowa<br>
+      Ilość waluty, jaką chcesz zakupić.
+      
+      <b>y</b> -  międzynarodowy symbol kupowanej waluty
+      Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
+      
+      Przykład:  
+          
+      sprzedaz(130, EUR) 
+
+- <b>funkcja "porownanie(x, y)"</b> - <br><br>
+      
+      <b>x</b> - międzynarodowy symbol pierwszej wybranej do porównania waluty
+      Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
+      
+      <b>y</b> - międzynarodowy symbol drugiej wybraniej do porównaia waluty
+      Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
+      
+      Przykłady:
+      
+      porownanie(USD, USD) 
+          
+      porownanie(PLN, USD)
+          
+      porownanie(USD, PLN)
 
 <b>Wbudowane obiekty:</b><br>
 
@@ -38,5 +72,8 @@ Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym 
 Arkadiusz Młyńczak, <br>
 Filip Ratajszczak, <br>
 Jan Malak <br>
+
+
+
 
 
