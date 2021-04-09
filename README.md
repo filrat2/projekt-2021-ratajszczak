@@ -5,7 +5,7 @@ Temat: Operacje na walutach i kursach. </b><br><br>
 
 Nasza praca projetkowa to zbiór trzech funkcji, które związane są ściśle z wymianą walut oraz porównywaniem kursów walut. 
 
-<b>Funkcje:<b>
+<b>Funkcje:</b>
 
 - <b>funkcja "kupno"</b> - <br><br>
 
