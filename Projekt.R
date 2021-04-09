@@ -143,7 +143,7 @@ waluty
 #FUNKCJE
 
 
-  #Funkcja sprzedaz - kantor kupuje od klienta
+  #Funkcja kupno - kantor sprzedaje klientowi
 
 sprzedaz = function(x, y){
   cat(paste("Za", x, "zł możesz kupić", round((x / y), digits =2),
@@ -155,8 +155,8 @@ sprzedaz = function(x, y){
           sprzedaz(130, EUR) 
 
 
-
-  #Funkcja kupno - kantor sprzedaje klientowi
+       
+  #Funkcja sprzedaz - kantor kupuje od klienta
 
 kupno = function(x, y){
   cat(paste("Jeśli sprzedasz",x , print(substitute(y)) , ", otrzymasz",
