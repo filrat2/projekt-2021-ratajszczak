@@ -1,4 +1,4 @@
-#Jeśli nie posiadasz zainsalowanego pakietu "readxl" zrób to na początku poprzez usunięcie znaku "#" w następnym wierszu oraz wykonanie wybranej linii kodu w skrypcie R za pomocą skrótu klawiszowego Ctrl+Enter.
+#Jeśli nie posiadasz zainstalowanego pakietu "readxl" zrób to na początku poprzez usunięcie znaku "#" w następnym wierszu oraz wykonanie wybranej linii kodu w skrypcie R za pomocą skrótu klawiszowego Ctrl+Enter.
 
 #install.packages("readxl")
 
@@ -23,7 +23,7 @@ kursy[3,]
 
 #OBIEKTY
 
-  #obikety kursów
+  #obiekty kursów
   #przypisanie kursów do międzynarodowych symboli walut
 
 THB = kursy$kurs_waluty[1]
@@ -143,29 +143,29 @@ waluty
 #FUNKCJE
 
 
-  #Funkcja kupno
+  #Funkcja sprzedaz - kantor kupuje od klienta
 
-kupno = function(x, y){
-  cat(paste(x, "zł możesz wymienić na", round((x / y), digits =2),
+sprzedaz = function(x, y){
+  cat(paste("Za", x, "zł możesz kupić", round((x / y), digits =2),
             print(substitute(y)),"."))
 }
 
           #przykład
           
-          kupno(130, EUR) 
+          sprzedaz(130, EUR) 
 
 
 
-  #Funkcja sprzedaz
+  #Funkcja kupno - kantor sprzedaje klientowi
 
-sprzedaz = function(x, y){
-  cat(paste("Jeśli sprzedasz",x , print(substitute(y)) , "otrzymasz",
+kupno = function(x, y){
+  cat(paste("Jeśli sprzedasz",x , print(substitute(y)) , ", otrzymasz",
             round((x * y), digits = 2), "zł."))
 } 
 
           #przykład  
           
-          sprzedaz(130, EUR) 
+          kupno(130, EUR) 
 
 
 
