@@ -9,10 +9,10 @@ Nasza praca projetkowa to zbiór trzech funkcji, które związane są ściśle z
 
 - <b>funkcja "kupno(x, y)"</b> - <br>
 
-      <b>x</b> - wartość liczbowa.<br>
+      x - wartość liczbowa.<br>
       Ilość waluty, jaką chcesz sprzedać w kantorze.<br>
       
-      <b>y</b> - międzynarodowy symbol sprzedawanej waluty
+      y - międzynarodowy symbol sprzedawanej waluty
       Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
       
       Przykład:
@@ -21,10 +21,10 @@ Nasza praca projetkowa to zbiór trzech funkcji, które związane są ściśle z
 
 - <b>funkcja "sprzedaz(x, y)"</b> - <br>
 
-      <b>x</b> - wartość liczbowa<br>
+      x - wartość liczbowa<br>
       Ilość waluty, jaką chcesz zakupić.
       
-      <b>y</b> -  międzynarodowy symbol kupowanej waluty
+      y -  międzynarodowy symbol kupowanej waluty
       Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
       
       Przykład:  
@@ -33,10 +33,10 @@ Nasza praca projetkowa to zbiór trzech funkcji, które związane są ściśle z
 
 - <b>funkcja "porownanie(x, y)"</b> - <br><br>
       
-      <b>x</b> - międzynarodowy symbol pierwszej wybranej do porównania waluty
+      x - międzynarodowy symbol pierwszej wybranej do porównania waluty
       Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
       
-      <b>y</b> - międzynarodowy symbol drugiej wybraniej do porównaia waluty
+      y - międzynarodowy symbol drugiej wybraniej do porównaia waluty
       Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
       
       Przykłady:
