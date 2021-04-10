@@ -65,20 +65,20 @@ W tym obiekcie znajdziemy tablicę zawierającą wszystkie waluty oraz ich kursy
 
 Ta ramka danych korzysta z danych, zawartych w pliku "kursy.xlsx". Gdy zaktualizujemy dane w pliku "kursy.xlsx" musimy ponownie załadować wybraną linię kodu w skrypcie R za pomocą skrótu klawiszowego Ctrl+Enter. Ta operacja pozwoli na zaktualizowanie danych w obiekcie "kursy" do aktualnych danych zawartych w pliku "kursy.xlsx". <br>
 
-    kursy
+      kursy
     
-    #>                        nazwa_waluty symbol_waluty kurs_waluty
-    1                      bat (Tajlandia)           THB  0.12200000
-    2                    dolar amerykański           USD  3.83650000
-    3                   dolar australijski           AUD  2.92680000
-    4                      dolar Hongkongu           HKD  0.49300000
-    5                     dolar kanadyjski           CAD  3.04070000
-    6                  dolar nowozelandzki           NZD  2.69540000
-    7                    dolar singapurski           SGD  2.86150000
-    8                                 euro           EUR  4.55810000
-    9                       forint (Węgry)           HUF  0.01270600
-    10                   frank szwajcarski           CHF  4.13530000
-    # ... with 25 more rows
+      #>                        nazwa_waluty symbol_waluty kurs_waluty
+      1                      bat (Tajlandia)           THB  0.12200000
+      2                    dolar amerykański           USD  3.83650000
+      3                   dolar australijski           AUD  2.92680000
+      4                      dolar Hongkongu           HKD  0.49300000
+      5                     dolar kanadyjski           CAD  3.04070000
+      6                  dolar nowozelandzki           NZD  2.69540000
+      7                    dolar singapurski           SGD  2.86150000
+      8                                 euro           EUR  4.55810000
+      9                       forint (Węgry)           HUF  0.01270600
+      10                   frank szwajcarski           CHF  4.13530000
+      # ... with 25 more rows
 
 Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym obiekcie, więc warto aktualizować dane w pliku "kursy.xlsx" oraz obiekcie "kursy" przynajmniej raz dziennie. <br>
 
@@ -86,7 +86,7 @@ Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym 
 
     kraje
     
-    [1] "Obsługiwane przez nasz zbiór funkcji państwa to: Tajlandia, Stany Zjednoczone, Australia, Hongkong, Kanada, Nowa Zelandia, Singapur, Niemcy, Hiszpania, Słowacja, Włochy, Francja, Czarnogóra, Austria, Portugalia, Malta, Litwa, Estonia, Andora, Łotwa, Belgia, Cypr, Słowenia, Luksemburg, Holandia, Irlandia, Monako, San Marino, Watykan, Greja, Węgry, Szwajcaria, Wielka Brytania, Ukraina, Japonia, Czechy, Dania, Islandia, Norwegia, Szwecja, Chorwacja, Rumunia, Bułgaria, Turcja, Izrael, Chile, Filipiny, Meksyk, RPA, Brazylia, Malezja, Rosja, Indonezja, Indie, Korea Południowa, Chiny, Polska"
+    [1] "Obsługiwane przez nasz zbiór funkcji państwa to: Tajlandia, Stany Zjednoczone, Australia, Hongkong,      Kanada, Nowa Zelandia, Singapur, Niemcy, Hiszpania, Słowacja, Włochy, Francja, Czarnogóra, Austria,           Portugalia, Malta, Litwa, Estonia, Andora, Łotwa, Belgia, Cypr, Słowenia, Luksemburg, Holandia, Irlandia,     Monako, San Marino, Watykan, Greja, Węgry, Szwajcaria, Wielka Brytania, Ukraina, Japonia, Czechy, Dania,      Islandia, Norwegia, Szwecja, Chorwacja, Rumunia, Bułgaria, Turcja, Izrael, Chile, Filipiny, Meksyk, RPA,      Brazylia, Malezja, Rosja, Indonezja, Indie, Korea Południowa, Chiny, Polska"
 
 - <b>obiekt "waluty"</b> - obiekt tekstowy, zawierający informację o walutach obsługiwanych przez nasz zbiór funkcji. Użyj tego obiektu, jeśli chcesz sprawidzić czy nasz zbiór funkcji obsługuję interesującą Cię walutę. Alternatywnie możesz to sprawdzić w obiekcie "kursy". <br>
 
