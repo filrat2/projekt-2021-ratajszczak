@@ -3,7 +3,8 @@ Przedmiot: Wstęp do programowania <br>
 
 Temat: Operacje na walutach i kursach. </b><br>
 
-Nasza praca projektowa to zbiór trzech funkcji, które związane są ściśle z wymianą walut oraz porównywaniem kursów walut. 
+Nasza praca projektowa to zbiór trzech funkcji, które związane są ściśle z wymianą walut oraz porównywaniem kursów walut. Dane dotyczące nazw walut oraz ich kursów w polskiej złotówce pobierane są bezpośrednio ze strony Narodowego Banku Polskiego (https://www.nbp.pl/kursy/kursya.html) jako plik kursy.xlsx. Do pozyskania najbardziej aktualnych danych należy odświeżyć je poprzez otwarcie pliku w programie Microsoft Excel i kliknięcie komendy "odśwież", która wyświetli się po kliknięciu prawego przycisku myszki na arkusz kalkulacyjny. 
+
 
 <b>Funkcje:</b>
 
@@ -17,11 +18,9 @@ Nasza praca projektowa to zbiór trzech funkcji, które związane są ściśle z
       y - międzynarodowy symbol sprzedawanej waluty
       Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
       
-      _______________
       Przykład:
           
       kupno(130, EUR)
-      _______________
 
 - <b>funkcja "sprzedaz(x, y)"</b> - funkcja służąca do przeliczania ceny zakupu wybranej ilości waluty, którą chcemy zakupić. <br>
 
@@ -33,11 +32,9 @@ Nasza praca projektowa to zbiór trzech funkcji, które związane są ściśle z
       y -  międzynarodowy symbol kupowanej waluty
       Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
       
-      __________________
       Przykład:  
           
       sprzedaz(130, EUR) 
-      __________________
 
 - <b>funkcja "porownanie(x, y)"</b> - funkcja służąca do porównywania aktualnych kursów pomiędzy różnymi walutami. <br>
       
@@ -49,7 +46,6 @@ Nasza praca projektowa to zbiór trzech funkcji, które związane są ściśle z
       y - międzynarodowy symbol drugiej wybranej do porównania waluty
       Dostępne waluty oraz ich symbole sprawdzisz w obiekcie "kursy" lub "waluty".
       
-      _____________________
       Przykłady:
       
       porownanie(USD, USD) 
@@ -57,7 +53,6 @@ Nasza praca projektowa to zbiór trzech funkcji, które związane są ściśle z
       porownanie(PLN, USD)
           
       porownanie(USD, PLN)
-      _____________________
 
 <b>Wbudowane obiekty:</b><br>
 
