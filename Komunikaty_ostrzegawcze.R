@@ -33,9 +33,23 @@ kalkulator_walut = function(x, y){
 kalkulator_walut(HRK, EUR)
 
 
+
+#__________________________________________________
+
    
+#FUNKCJA_SEGREGACJI_WALUT
+
+
+cena_waluty = data.frame(USD, AUD, HKD, CAD, NZD, SGD, EUR, HUF, CHF, GBP, UAH, JPY, CZK, DKK, ISK, NOK, SEK, HRK, RON, BGN, TRY, ILS, CLP, PHP, MXN, ZAR, BRL, MYR, IDR, INR, KRW, CNY, XDR)
+cena_waluty
+
+seg_walut = function(cena_waluty){
+
+  (cena_waluty)
   
-  
+}    
+    
+seg_walut(cena_waluty > 4)
   
   
 
