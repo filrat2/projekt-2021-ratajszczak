@@ -65,6 +65,8 @@ W tym obiekcie znajdziemy tablicę zawierającą wszystkie waluty oraz ich kursy
 
 Ta ramka danych korzysta z danych, zawartych w pliku "kursy.xlsx". Gdy zaktualizujemy dane w pliku "kursy.xlsx" musimy ponownie załadować wybraną linię kodu w skrypcie R za pomocą skrótu klawiszowego Ctrl+Enter. Ta operacja pozwoli na zaktualizowanie danych w obiekcie "kursy" do aktualnych danych zawartych w pliku "kursy.xlsx". <br>
 
+Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym obiekcie, więc warto aktualizować dane w pliku "kursy.xlsx" oraz obiekcie "kursy" przynajmniej raz dziennie. <br>
+
       kursy
     
       #>                        nazwa_waluty symbol_waluty kurs_waluty
@@ -79,11 +81,9 @@ Ta ramka danych korzysta z danych, zawartych w pliku "kursy.xlsx". Gdy zaktualiz
       9                       forint (Węgry)           HUF  0.01270600
       10                   frank szwajcarski           CHF  4.13530000
       # ... with 25 more rows
-
-Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym obiekcie, więc warto aktualizować dane w pliku "kursy.xlsx" oraz obiekcie "kursy" przynajmniej raz dziennie. <br>
-
+      
 - <b>obiekt "kraje"</b> - obiekt tekstowy, zawierający informację o państwach, których waluty znajdziesz w naszym zbiorze funkcji.  Użyj tego obiektu, jeśli chcesz sprawdzić czy interesujące Cię państwo (jego waluta) jest obsługiwana przez nasz zbiór funkcji. <br>
-
+      
       kraje
     
       #>  [1] "Obsługiwane przez nasz zbiór funkcji państwa to: ...
