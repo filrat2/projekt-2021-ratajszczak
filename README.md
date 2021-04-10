@@ -117,8 +117,8 @@ Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym 
       
       Niemcy
       
-      <i>#>  nazwa_waluty symbol_waluty kurs_waluty
-      8         euro           EUR      4.5581</i>
+      #>  nazwa_waluty symbol_waluty kurs_waluty
+      8         euro           EUR      4.5581
 
 <b>Autorzy: </b><br>
 Arkadiusz Młyńczak, <br>
