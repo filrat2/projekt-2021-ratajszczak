@@ -86,7 +86,7 @@ Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym 
       
       kraje
     
-      #>  [1] "Obsługiwane przez nasz zbiór funkcji państwa to: ...
+      #>  [1] "Obsługiwane przez nasz zbiór funkcji państwa to: ..."
 
 - <b>obiekt "waluty"</b> - obiekt tekstowy, zawierający informację o walutach obsługiwanych przez nasz zbiór funkcji. Użyj tego obiektu, jeśli chcesz sprawidzić czy nasz zbiór funkcji obsługuję interesującą Cię walutę. Alternatywnie możesz to sprawdzić w obiekcie "kursy". <br>
 
