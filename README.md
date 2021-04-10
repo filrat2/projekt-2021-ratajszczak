@@ -66,7 +66,7 @@ W tym obiekcie znajdziemy tablicę zawierającą wszystkie waluty oraz ich kursy
 Ta ramka danych korzysta z danych, zawartych w pliku "kursy.xlsx". Gdy zaktualizujemy dane w pliku "kursy.xlsx" musimy ponownie załadować wybraną linię kodu w skrypcie R za pomocą skrótu klawiszowego Ctrl+Enter. Ta operacja pozwoli na zaktualizowanie danych w obiekcie "kursy" do aktualnych danych zawartych w pliku "kursy.xlsx". <br>
 
         kursy
-      
+    
         #>                        nazwa_waluty symbol_waluty kurs_waluty
         1                      bat (Tajlandia)           THB  0.12200000
         2                    dolar amerykański           USD  3.83650000
