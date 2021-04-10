@@ -1,4 +1,4 @@
-# FUNKCJA_SEGREGACJI_WARTOŚCI_WALUT
+# Wykorzystanie funkcji "which" w celu segregacji wartości walut
 
 # Dzięki tej funkcji użytkownik jest w stanie sprawdzić średni zakres wartości walut.
 
