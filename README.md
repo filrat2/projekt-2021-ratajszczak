@@ -96,7 +96,7 @@ Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym 
 
 - <b>obiekty kursów</b> - obiekty liczbowe, zawierające przypisanie aktualnego kursu danej waluty do jego międzynarodowego symbolu. <br>
 
-      Przykład:
+      Przykłady:
       
       USD 
       
@@ -108,7 +108,7 @@ Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym 
 
 - <b>obiekty państw</b> - obiekty typu ramka danych (<i>ang. data frame</i>), zawierające informację o nazwie oficjalnej waluty wybranego państwa, symbolu międzynarodowym tej waluty oraz jej obecnym kursie. <br>
 
-      Przykład:
+      Przykłady:
       
       StanyZjednoczone
       
