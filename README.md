@@ -67,20 +67,20 @@ Ta ramka danych korzysta z danych, zawartych w pliku "kursy.xlsx". Gdy zaktualiz
 
 Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym obiekcie, więc warto aktualizować dane w pliku "kursy.xlsx" oraz obiekcie "kursy" przynajmniej raz dziennie. <br>
 
-      kursy
+    kursy
     
-      #>                        nazwa_waluty symbol_waluty kurs_waluty
-      1                      bat (Tajlandia)           THB  0.12200000
-      2                    dolar amerykański           USD  3.83650000
-      3                   dolar australijski           AUD  2.92680000
-      4                      dolar Hongkongu           HKD  0.49300000
-      5                     dolar kanadyjski           CAD  3.04070000
-      6                  dolar nowozelandzki           NZD  2.69540000
-      7                    dolar singapurski           SGD  2.86150000
-      8                                 euro           EUR  4.55810000
-      9                       forint (Węgry)           HUF  0.01270600
-      10                   frank szwajcarski           CHF  4.13530000
-      # ... with 25 more rows
+    #>                        nazwa_waluty symbol_waluty kurs_waluty
+    1                      bat (Tajlandia)           THB  0.12200000
+    2                    dolar amerykański           USD  3.83650000
+    3                   dolar australijski           AUD  2.92680000
+    4                      dolar Hongkongu           HKD  0.49300000
+    5                     dolar kanadyjski           CAD  3.04070000
+    6                  dolar nowozelandzki           NZD  2.69540000
+    7                    dolar singapurski           SGD  2.86150000
+    8                                 euro           EUR  4.55810000
+    9                       forint (Węgry)           HUF  0.01270600
+    10                   frank szwajcarski           CHF  4.13530000
+    # ... with 25 more rows
       
 - <b>obiekt "kraje"</b> - obiekt tekstowy, zawierający informację o państwach, których waluty znajdziesz w naszym zbiorze funkcji.  Użyj tego obiektu, jeśli chcesz sprawdzić czy interesujące Cię państwo (jego waluta) jest obsługiwana przez nasz zbiór funkcji. <br>
       
