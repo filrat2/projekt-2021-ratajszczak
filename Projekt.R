@@ -1,30 +1,29 @@
-#Jeśli nie posiadasz zainstalowanego pakietu "readxl" zrób to na początku poprzez usunięcie znaku "#" w następnym wierszu oraz wykonanie wybranej linii kodu w skrypcie R za pomocą skrótu klawiszowego Ctrl+Enter.
+#załadowanie wymaganych pakietów oraz pobranie danych
 
-#install.packages("readxl")
-
-library(readxl)
+library(rvest)
+library(stringr)
 
 #stworzenie ramki danych z kursami walut
 
-kursy_plik = read_excel("kursy.xlsx")
 
-print(kursy_plik, n=nrow(kursy_plik))
+plik_html = read_html("https://www.nbp.pl/kursy/kursya.html", encoding = "UTF-8")
+tabela_html = html_node(plik_html, ".pad5")
 
-kursy = data.frame(kursy_plik)
-kursy
+tabela_r = html_table(tabela_html, fill = TRUE, dec = ",")
 
-colnames(kursy)
-names(kursy)[names(kursy) == "Symbol.waluty"] = "symbol_waluty"
-names(kursy)[names(kursy) == "Kurs.waluty"] = "kurs_waluty"
+print(tabela_r, n=nrow(tabela_r))
+
+kursy = data.frame(tabela_r)
+
+names(kursy)[names(kursy) == "Kod.waluty"] = "symbol_waluty" 
+names(kursy)[names(kursy) == "Kurs.średni"] = "kurs_waluty" 
 names(kursy)[names(kursy) == "Nazwa.waluty"] = "nazwa_waluty"
-colnames(kursy)
-kursy
-kursy[3,]
+
 
 #OBIEKTY
 
-  #obiekty kursów
-  #przypisanie kursów do międzynarodowych symboli walut
+#obiekty kursów
+#przypisanie kursów do międzynarodowych symboli walut
 
 THB = kursy$kurs_waluty[1]
 USD = kursy$kurs_waluty[2]
@@ -34,14 +33,14 @@ CAD = kursy$kurs_waluty[5]
 NZD = kursy$kurs_waluty[6]
 SGD = kursy$kurs_waluty[7]
 EUR = kursy$kurs_waluty[8]
-HUF = kursy$kurs_waluty[9]
+HUF = (kursy$kurs_waluty[9] / 100)
 CHF = kursy$kurs_waluty[10]
 GBP = kursy$kurs_waluty[11]
 UAH = kursy$kurs_waluty[12]
-JPY = kursy$kurs_waluty[13]
+JPY = (kursy$kurs_waluty[13] / 100)
 CZK = kursy$kurs_waluty[14]
 DKK = kursy$kurs_waluty[15]
-ISK = kursy$kurs_waluty[16]
+ISK = (kursy$kurs_waluty[16] / 100)
 NOK = kursy$kurs_waluty[17]
 SEK = kursy$kurs_waluty[18]
 HRK = kursy$kurs_waluty[19]
@@ -49,21 +48,21 @@ RON = kursy$kurs_waluty[20]
 BGN = kursy$kurs_waluty[21]
 TRY = kursy$kurs_waluty[22]
 ILS = kursy$kurs_waluty[23]
-CLP = kursy$kurs_waluty[24]
+CLP = (kursy$kurs_waluty[24] / 100)
 PHP = kursy$kurs_waluty[25]
 MXN = kursy$kurs_waluty[26]
 ZAR = kursy$kurs_waluty[27]
 BRL = kursy$kurs_waluty[28]
 MYR = kursy$kurs_waluty[29]
 RUB = kursy$kurs_waluty[30]
-IDR = kursy$kurs_waluty[31]
-INR = kursy$kurs_waluty[32]
-KRW = kursy$kurs_waluty[33]
+IDR = (kursy$kurs_waluty[31] / 10000)
+INR = (kursy$kurs_waluty[32] / 100)
+KRW = (kursy$kurs_waluty[33] / 100)
 CNY = kursy$kurs_waluty[34]
 XDR = kursy$kurs_waluty[35]
 PLN = 1.00
 
-  #obiekty państw
+#obiekty państw
 
 Tajlandia = kursy[1,]  
 StanyZjednoczone = kursy[2,]
@@ -123,53 +122,44 @@ Indie =  kursy[32,]
 KoreaPoludniowa =  kursy[33,]
 Chiny = kursy[34,]
 Polska = data.frame(nazwa_waluty = "polski złoty",
-                    symbol_waluty = "PLN",
+                    symbol_waluty = "1 PLN",
                     kurs_waluty = "1.00")
 
-  #obiekt "kraje"
+#obiekt "kraje"
 
 kraje = print("Obsługiwane przez nasz zbiór funkcji państwa to: Tajlandia, Stany Zjednoczone, Australia, Hongkong, Kanada, Nowa Zelandia, Singapur, Niemcy, Hiszpania, Słowacja, Włochy, Francja, Czarnogóra, Austria, Portugalia, Malta, Litwa, Estonia, Andora, Łotwa, Belgia, Cypr, Słowenia, Luksemburg, Holandia, Irlandia, Monako, San Marino, Watykan, Greja, Węgry, Szwajcaria, Wielka Brytania, Ukraina, Japonia, Czechy, Dania, Islandia, Norwegia, Szwecja, Chorwacja, Rumunia, Bułgaria, Turcja, Izrael, Chile, Filipiny, Meksyk, RPA, Brazylia, Malezja, Rosja, Indonezja, Indie, Korea Południowa, Chiny, Polska")
 
-kraje 
 
-  #obiekt "waluty"
+#obiekt "waluty"
 
 waluty = print("Obsługiwane przez nasz zbiór funkcji waluty to: THB (bat (Tajlandia), USD (dolar amerykański), AUD (dolar australijski), HKD (dolar Hongkongu), CAD (dolar kanadyjski), NZD (dolar nowozelandzki), SGD (dolar singapurski), EUR (euro), HUF (forint (Węgry)), CHF (frank szwajcarski), GBP (funt szterling), UAH (hrywna (Ukraina)),JPY (jen (Japonia)), CZK (korona czeska), DKK (korona duńska), ISK (korona islandzka), NOK (korona norweska), SEK (korona szwedzka), HRK (kuna (Chorwacja)), RON (lej rumuński), BGN (lew (Bułgaria)), TRY (lira turecka), ILS (nowy izraelski szekel), CLP (peso chilijskie), PHP (peso filipińskie), MXN (peso meksykańskie), ZAR (rand (Republika Południowej Afryki)), BRL (real (Brazylia)), MYR (ringgit (Malezja)), RUB (rubel rosyjski), IDR (rupia indonezyjska), INR (rupia indyjska), KRW (won południowokoreański), CNY (yuan renminbi (Chiny)), XDR (SDR (MFW)), PLN (polski złoty nowy)")
 
-waluty
 
 
 
 #FUNKCJE
 
 
-  #Funkcja sprzedaz - kantor sprzedaje klientowi
+#Funkcja sprzedaz - kantor sprzedaje klientowi
 
 sprzedaz = function(x, y){
-  cat(paste("Za", x, "zł możesz kupić", round((x / y), digits =2),
+  cat(paste("Za", x, "zł możesz kupić", round((x / y), digits = 2),
             print(substitute(y)),"."))
+  sell <<- x / y
 }
 
-          #przykład
-          
-          sprzedaz(130, EUR) 
 
+#Funkcja kupno - kantor kupuje od klienta
 
-       
-  #Funkcja kupno - kantor kupuje od klienta
 
 kupno = function(x, y){
   cat(paste("Jeśli sprzedasz",x , print(substitute(y)) , ", otrzymasz",
             round((x * y), digits = 2), "zł."))
+  buy <<- x * y
 } 
 
-          #przykład  
-          
-          kupno(130, EUR) 
 
-
-
-  #Funkcja porownanie
+#Funkcja porownanie
 
 porownanie = function(x, y){
   if (x > y){
@@ -180,11 +170,3 @@ porownanie = function(x, y){
     cat(paste("Kursy tych walut są równe. Prawdopodobnie do porównania wybrałeś dwie takie same waluty."))
   }
 }  
-
-          #przykłady
-          
-          porownanie(USD, USD) 
-          
-          porownanie(PLN, USD)
-          
-          porownanie(USD, PLN)

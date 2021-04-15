@@ -5,6 +5,12 @@ Temat: Operacje na walutach i kursach. </b><br>
 
 Nasza praca projektowa to zbiór trzech funkcji, które związane są ściśle z wymianą walut oraz porównywaniem kursów walut. Dane dotyczące nazw walut oraz ich średnich kursów w polskiej złotówce pobierane są bezpośrednio ze strony Narodowego Banku Polskiego (https://www.nbp.pl/kursy/kursya.html) jako plik kursy.xlsx. Do pozyskania najbardziej aktualnych danych należy odświeżyć je poprzez otwarcie pliku w programie Microsoft Excel i kliknięcie komendy "odśwież", która wyświetli się po kliknięciu prawego przycisku myszki na arkusz kalkulacyjny. 
 
+<b>Wymagania</b>
+
+Jeśli nie posiadasz zainstalowanego pakietu "rvest" oraz "stringr" zainstaluj je na początku poprzez wpisanie komendy 
+          
+      install.packages("rvest")
+      install.packages("stringr")
 
 <b>Funkcje:</b>
 
@@ -124,8 +130,3 @@ Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym 
 Arkadiusz Młyńczak, <br>
 Filip Ratajszczak, <br>
 Jan Malak <br>
-
-
-
-
-
