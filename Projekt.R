@@ -8,6 +8,7 @@ library(stringr)
 czyszczenie = function()
 {
 plik_html <<- read_html("https://www.nbp.pl/kursy/kursya.html", encoding = "UTF-8")
+
 tabela_html <<- html_node(plik_html, ".pad5")
 
 tabela_r <<- html_table(tabela_html, fill = TRUE, dec = ",")
@@ -16,11 +17,7 @@ print(tabela_r, n=nrow(tabela_r))
 
 kursy <<- data.frame(tabela_r)
 
-names(kursy)[names(kursy) == "Kod.waluty"] <<- "symbol_waluty" 
-names(kursy)[names(kursy) == "Kurs.średni"] <<- "kurs_waluty" 
-names(kursy)[names(kursy) == "Nazwa.waluty"] <<- "nazwa_waluty"
-
-print(kursy)
+colnames(kursy) = c("nazwa_waluty", "kod_waluty", "kurs_waluty")
 }
 czyszczenie()
 
