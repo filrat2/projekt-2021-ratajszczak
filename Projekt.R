@@ -123,7 +123,7 @@ Indie =  kursy[32,]
 KoreaPoludniowa =  kursy[33,]
 Chiny = kursy[34,]
 Polska = data.frame(nazwa_waluty = "polski złoty",
-                    symbol_waluty = "1 PLN",
+                    kod_waluty = "1 PLN",
                     kurs_waluty = "1.00")
 
 #obiekt "kraje"
