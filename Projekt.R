@@ -17,7 +17,7 @@ print(tabela_r, n=nrow(tabela_r))
 
 kursy <<- data.frame(tabela_r)
 
-colnames(kursy) = c("nazwa_waluty", "kod_waluty", "kurs_waluty")
+colnames(kursy) <<- c("nazwa_waluty", "kod_waluty", "kurs_waluty")
 }
 czyszczenie()
 
