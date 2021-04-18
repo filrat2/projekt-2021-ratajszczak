@@ -79,18 +79,18 @@ Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym 
 
     kursy
     
-          #>                          nazwa_waluty kod_waluty kurs_waluty
-          1                      bat (Tajlandia)      1 THB      0.1214
-          2                    dolar amerykański      1 USD      3.7978
-          3                   dolar australijski      1 AUD      2.9397
-          4                      dolar Hongkongu      1 HKD      0.4889
-          5                     dolar kanadyjski      1 CAD      3.0341
-          6                  dolar nowozelandzki      1 NZD      2.7193
-          7                    dolar singapurski      1 SGD      2.8469
-          8                                 euro      1 EUR      4.5481
-          9                       forint (Węgry)    100 HUF      1.2604
-          10                   frank szwajcarski      1 CHF      4.1279
-          # ... with 25 more rows
+    #>                        nazwa_waluty kod_waluty kurs_waluty
+    1                      bat (Tajlandia)      1 THB      0.1214
+    2                    dolar amerykański      1 USD      3.7978
+    3                   dolar australijski      1 AUD      2.9397
+    4                      dolar Hongkongu      1 HKD      0.4889
+    5                     dolar kanadyjski      1 CAD      3.0341
+    6                  dolar nowozelandzki      1 NZD      2.7193
+    7                    dolar singapurski      1 SGD      2.8469
+    8                                 euro      1 EUR      4.5481
+    9                       forint (Węgry)    100 HUF      1.2604
+    10                   frank szwajcarski      1 CHF      4.1279
+    # ... with 25 more rows
       
 - <b>obiekt "kraje"</b> - obiekt tekstowy, zawierający informację o państwach, których waluty znajdziesz w naszym zbiorze funkcji.  Użyj tego obiektu, jeśli chcesz sprawdzić czy interesujące Cię państwo (jego waluta) jest obsługiwana przez nasz zbiór funkcji. <br>
       
@@ -122,13 +122,13 @@ Funkcje zawarte w naszej pracy projektowej korzystają z danych zawartych w tym 
       
       StanyZjednoczone
       
-      #>    nazwa_waluty symbol_waluty kurs_waluty
-      2 dolar amerykański           USD      3.8365
+      #>    nazwa_waluty kod_waluty kurs_waluty
+      2 dolar amerykański     1 USD      3.7978
       
       Niemcy
       
-      #>  nazwa_waluty symbol_waluty kurs_waluty
-      8         euro           EUR      4.5581
+      #>  nazwa_waluty kod_waluty kurs_waluty
+      8         euro        1 EUR      4.5481
 
 <b>Autorzy: </b><br>
 Arkadiusz Młyńczak, <br>
