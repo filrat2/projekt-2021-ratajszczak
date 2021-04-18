@@ -5,27 +5,28 @@ library(stringr)
 
 #stworzenie ramki danych z kursami walut
 
-czyszczenie = function()
 {
-plik_html <<- read_html("https://www.nbp.pl/kursy/kursya.html", encoding = "UTF-8")
-
-tabela_html <<- html_node(plik_html, ".pad5")
-
-tabela_r <<- html_table(tabela_html, fill = TRUE, dec = ",")
-
-print(tabela_r, n=nrow(tabela_r))
-
-kursy <<- data.frame(tabela_r)
-
-colnames(kursy) <<- c("nazwa_waluty", "kod_waluty", "kurs_waluty")
+  czyszczenie = function()
+      {
+      plik_html <<- read_html("https://www.nbp.pl/kursy/kursya.html", encoding = "UTF-8")
+      
+      tabela_html <<- html_node(plik_html, ".pad5")
+      
+      tabela_r <<- html_table(tabela_html, fill = TRUE, dec = ",")
+      
+      kursy <<- data.frame(tabela_r)
+      
+      colnames(kursy) <<- c("nazwa_waluty", "kod_waluty", "kurs_waluty")
+      }
+  czyszczenie()
 }
-czyszczenie()
 
 #OBIEKTY
 
 #obiekty kursów
 #przypisanie kursów do międzynarodowych symboli walut
 
+{
 THB = kursy$kurs_waluty[1]
 USD = kursy$kurs_waluty[2]
 AUD = kursy$kurs_waluty[3]
@@ -134,7 +135,7 @@ kraje = print("Obsługiwane przez nasz zbiór funkcji państwa to: Tajlandia, St
 #obiekt "waluty"
 
 waluty = print("Obsługiwane przez nasz zbiór funkcji waluty to: THB (bat (Tajlandia), USD (dolar amerykański), AUD (dolar australijski), HKD (dolar Hongkongu), CAD (dolar kanadyjski), NZD (dolar nowozelandzki), SGD (dolar singapurski), EUR (euro), HUF (forint (Węgry)), CHF (frank szwajcarski), GBP (funt szterling), UAH (hrywna (Ukraina)),JPY (jen (Japonia)), CZK (korona czeska), DKK (korona duńska), ISK (korona islandzka), NOK (korona norweska), SEK (korona szwedzka), HRK (kuna (Chorwacja)), RON (lej rumuński), BGN (lew (Bułgaria)), TRY (lira turecka), ILS (nowy izraelski szekel), CLP (peso chilijskie), PHP (peso filipińskie), MXN (peso meksykańskie), ZAR (rand (Republika Południowej Afryki)), BRL (real (Brazylia)), MYR (ringgit (Malezja)), RUB (rubel rosyjski), IDR (rupia indonezyjska), INR (rupia indyjska), KRW (won południowokoreański), CNY (yuan renminbi (Chiny)), XDR (SDR (MFW)), PLN (polski złoty nowy)")
-
+}
 
 
 
