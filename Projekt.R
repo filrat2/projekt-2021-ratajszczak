@@ -8,9 +8,10 @@ library(stringr)
 {
   czyszczenie = function()
       {
-      plik_html <<- read_html("https://www.nbp.pl/kursy/kursya.html", encoding = "UTF-8")
+      plik_html <<- read_html("https://www.nbp.pl/kursy/kursya.html", 
+                              encoding = "UTF-8")
       
-      tabela_html <<- html_node(plik_html, ".pad5")
+      tabela_html <<- html_node(plik_html, "table.nbptable")
       
       tabela_r <<- html_table(tabela_html, fill = TRUE, dec = ",")
       
